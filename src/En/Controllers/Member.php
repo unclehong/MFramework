@@ -79,4 +79,36 @@ class Member extends Controller
         	}
         }
     }
+    
+    /**
+     * user logout
+     * @apiGroup Member
+     * @api {post} member/user_logout member logut
+     * 
+     * @apiParam {int} member_id member id
+     * @apiParam {string} token token
+     */
+    public function user_logout()
+    {
+    	if($this->request->is_post())
+    	{
+    		$this->validator($this->request->post(), [
+    				'member_id' => 'required',
+    				'token' => 'required',
+    		]);
+    		
+    		//validate the member_id and token
+    		if(password_verify($this->request->post('member_id'),$this->request->post('token')))
+    		{
+    			//delete the session
+    			$this->request->session->pop($this->request->post('token'));
+    			return $this->success([]);
+    		}else
+    		{
+    			return $this->fails(10005,'logout fails');
+    		}
+    	}
+    }
+    
+    
 }
