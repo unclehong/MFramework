@@ -1,0 +1,12 @@
+{
+	"require" : {
+		"gabordemooij/redbean" : "^4.3"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Ming\\" : "src/",
+			"M\\" : "m/",
+			"Config\\" : "config/"
+		}
+	}
+}
