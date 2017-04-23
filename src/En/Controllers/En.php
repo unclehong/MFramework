@@ -19,6 +19,7 @@ class En extends Controller
 	/**
 	 * get the newset en test lists
 	 * @apiGroup En
+	 * @api {post} en/en/get_newest_en_lists
 	 * @apiParam {int} offset the number of current page
 	 * @apiParam {int} many the number of required
 	 * 
@@ -40,5 +41,21 @@ class En extends Controller
 	}
 	
 	
+	/**
+	 * get the choice test list which belongs to en test
+	 * @apiGroup En
+	 * @api {post} en/en/get_choice_lists
+	 * 
+	 * @apiParam {int} en_id en test id
+	 */
+	public function get_choice_lists()
+	{
+		if($this->request->is_post())
+		{
+			$this->validator($this->request->post(), [
+					'en_id' => 'required',
+			]);
+		}
+	}
 	
 }
