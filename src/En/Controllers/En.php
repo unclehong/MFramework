@@ -54,7 +54,8 @@ class En extends Controller
 		{
 			$this->validator($this->request->post(), [
 					'en_id' => 'required',
-			]);
+                ]);
+
 		}
 	}
 	

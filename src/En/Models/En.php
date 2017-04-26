@@ -13,5 +13,12 @@ class En extends Model
 	{
 		//get the result of en test lists
 		return self::find('en','ORDER BY id DESC LIMIT ?,?',[(int)($offset - 1)*$many,(int)$many]);
+    }
+
+    /**
+     * get choices which belongs to en test
+     */
+    public function get_choice_lists()
+	{
 	}
 }
