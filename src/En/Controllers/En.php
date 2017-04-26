@@ -39,8 +39,8 @@ class En extends Controller
 			$this->success($data);
 		}
 	}
-	
-	
+
+
 	/**
 	 * get the choice test list which belongs to en test
 	 * @apiGroup En
@@ -55,6 +55,8 @@ class En extends Controller
 			$this->validator($this->request->post(), [
 					'en_id' => 'required',
                 ]);
+
+			$this->en_model->get_choice_lists($this->request->post('en_id'));
 
 		}
 	}

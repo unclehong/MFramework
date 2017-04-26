@@ -18,7 +18,8 @@ class En extends Model
     /**
      * get choices which belongs to en test
      */
-    public function get_choice_lists()
+    public function get_choice_lists($en_id)
 	{
+        self::find('choice','');
 	}
 }

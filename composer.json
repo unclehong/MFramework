@@ -6,7 +6,8 @@
 		"psr-4" : {
 			"Ming\\" : "src/",
 			"M\\" : "m/",
-			"Config\\" : "config/"
+			"Config\\" : "config/",
+			"Schema\\" : "schemas/"
 		}
 	}
 }
