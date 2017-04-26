@@ -1,6 +1,7 @@
 {
 	"require" : {
-		"gabordemooij/redbean" : "^4.3"
+		"gabordemooij/redbean" : "^4.3",
+		"propel/propel": "~2.0@dev"
 	},
 	"autoload" : {
 		"psr-4" : {
