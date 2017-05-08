@@ -10,6 +10,9 @@ class Index extends Controller
     public function index()
     {
     	echo 'ffffff';
+    	$user = new User();
+    	$user = $user->test();
+    	echo $user->password;
         $this->render('ming/index');
     }
 }

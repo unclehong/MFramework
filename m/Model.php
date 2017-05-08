@@ -8,18 +8,9 @@
 
 namespace M;
 
-use RedBeanPHP\R;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 
-class Model extends R
+class Model extends EloquentModel
 {
-    //链接数据库
-    public function __construct()
-    {
-        self::setup('mysql:host=127.0.0.1;dbname=en','root','pass4mingming');
-    }
 
-    public function __destruct()
-    {
-        self::close();
-    }
 }

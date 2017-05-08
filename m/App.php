@@ -3,10 +3,11 @@
 namespace M;
 
 use Config\Config;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class App
 {
-    public function run()
+    static public function run()
     {
     	session_start();
     	//获取中间件
@@ -33,6 +34,11 @@ class App
             $c = $mca['c'];
             $a = $mca['a'];
         }
+
+        //连接数据库
+        $capsule = new Capsule();
+    	$capsule->addConnection(Config::database());
+    	$capsule->bootEloquent();
 
         $class = 'Ming\\'.ucfirst($m).'\Controllers\\'.ucfirst($c);
         $obj = new $class();

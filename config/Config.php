@@ -24,4 +24,19 @@ class Config
 				'a' => 'index',
 		];
 	}
+
+	//配置数据库
+    static public function database()
+    {
+        return [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'database' => 'en',
+            'username' => 'root',
+            'password' => 'pass4mingming',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+        ];
+    }
 }

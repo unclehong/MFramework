@@ -12,9 +12,11 @@ use M\Model;
 
 class User extends Model
 {
+    protected $table = 'members';
+    public $timestamps = false;
+
     public function test()
     {
-        $members = self::findAll('members');
-        var_dump($members);
+        return $this->find(21);
     }
 }
