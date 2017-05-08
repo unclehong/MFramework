@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Propel' => array($vendorDir . '/propel/propel/src'),
+    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
 );

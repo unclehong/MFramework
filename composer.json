@@ -1,7 +1,8 @@
 {
 	"require" : {
 		"gabordemooij/redbean" : "^4.3",
-		"propel/propel": "~2.0@dev"
+		"propel/propel": "~2.0@dev",
+		"illuminate/database": "*"
 	},
 	"autoload" : {
 		"psr-4" : {
