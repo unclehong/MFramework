@@ -8,7 +8,9 @@ class Register
 	
 	static public function bind($alias , $object)
 	{
-		self::$objarr[$alias] = $object;
+	    //is on the tree
+        if(! self::get($alias))
+		    self::$objarr[$alias] = $object;
 	}
 	
 	static public function get($alias)
