@@ -98,10 +98,11 @@ class Controller
     /**
      * success response
      */
-    public function success($arr = [],$code = 10000,$msg = '本次操作成功')
+    public function success($arr = [],$page = 0,$offset = 0,$code = 10000,$msg = '本次操作成功')
     {
     	$data = [
     			'data'=>$arr,
+                'page' => ['page' => $page,'offset' => $offset],
     			'code' => $code,
     			'msg' => $msg,
     	];
